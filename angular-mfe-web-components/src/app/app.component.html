@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="wrapper">
+    <h1>{{ title }}</h1>
+    <img
+      class="avatar"
+      src="https://i.stack.imgur.com/A57wQ.png?s=192&g=1"
+      alt="avatar"
+    />
+    <div class="error" *ngIf="showError">* name required</div>
+    <input type="text" placeholder="username" [(ngModel)]="userName" />
+    <input type="password" disabled placeholder="password" />
+    <button (click)="onClickLogin()" class="login-button">LOG IN</button>
+  </div>
+</div>
