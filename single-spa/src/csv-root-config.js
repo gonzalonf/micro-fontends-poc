@@ -1,6 +1,8 @@
 import { registerApplication, start } from "single-spa";
 
 const loginMatch = (location) => /\/$|login/.test(location.pathname);
+const shouldDisplayNav = (location) =>
+  !/\/$|login$|checkout$/.test(location.pathname);
 
 registerApplication({
   name: "@single-spa/welcome",

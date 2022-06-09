@@ -3,7 +3,7 @@
   "scripts": {
     "start": "webpack --watch",
     "build": "webpack --mode production",
-    "serve": "serve dist -p 3010"
+    "serve": "serve dist -p 3015"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -17,16 +17,12 @@
     "prettier": "^2.3.2",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
+    "webpack-config-single-spa-react": "^4.0.0",
     "webpack-dev-server": "^4.0.0",
     "webpack-merge": "^5.8.0",
     "html-webpack-plugin": "^5.5.0",
     "serve": "^13.0.2",
     "concurrently": "^7.2.1"
   },
-  "dependencies": {
-    "@babel/runtime": "^7.15.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "single-spa-react": "^4.3.1"
-  }
+  "dependencies": {}
 }

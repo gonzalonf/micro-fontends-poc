@@ -1,7 +1,7 @@
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const deps = require("./package.json").dependencies;
+// const deps = require("./package.json").dependencies;
 
 module.exports = {
   entry: "./src/index",
@@ -15,8 +15,7 @@ module.exports = {
   },
 
   output: {
-    publicPath: "http://localhost:3010/",
-    // libraryTarget: "System",
+    publicPath: "http://localhost:3015/",
   },
 
   resolve: {
@@ -37,36 +36,15 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "reactUi",
-      library: { type: "var", name: "reactUi" },
+      name: "vanilla",
+      library: { type: "var", name: "vanilla" },
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {
-        "./Header": "./src/HeaderMfe",
-        // Footer: "./src/Footer",
+        "./greet": "./src/greet", //NOTE: this './exported' key is the new syntax, a simple key without "./" fails
+        // App: "./src/App",
       },
-      shared: {
-        // "@babel/runtime": {
-        //   singleton: true,
-        //   eager: true,
-        //   requiredVersion: deps["@babel/runtime"],
-        // },
-        react: {
-          singleton: true,
-          eager: true,
-          requiredVersion: deps["react"],
-        },
-        "react-dom": {
-          singleton: true,
-          eager: true,
-          requiredVersion: deps["react-dom"],
-        },
-        "single-spa-react": {
-          singleton: true,
-          eager: true,
-          requiredVersion: deps["single-spa-react"],
-        },
-      },
+      shared: [],
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
