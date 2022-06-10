@@ -2,13 +2,10 @@ import React, { useEffect, useState } from "react";
 
 import store from "vanilla/store";
 
-export default function Header({ userName }) {
+export default function Home({ userName }) {
   const [name, setName] = useState("");
   useEffect(() => {
     setName(store.user.name);
-    // store.subscribe(() => {
-    //   console.log(store.user.name);
-    // });
   }, []);
   return (
     <div

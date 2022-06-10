@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:single-spa:angular-login": "ng build angular-login --configuration production",
-    "serve:single-spa:angular-login": "ng s --project angular-login --disable-host-check --port 4000 --live-reload false"
+    "serve:single-spa:angular-login": "ng s --project angular-login --disable-host-check --port 4000 --live-reload false",
+    "watch:serve": "ng serve"
   },
   "private": true,
   "dependencies": {
