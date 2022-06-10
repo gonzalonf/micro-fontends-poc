@@ -19,6 +19,13 @@ module.exports = {
     publicPath: "http://localhost:3001/",
   },
 
+  devServer: {
+    port: 3001,
+    historyApiFallback: {
+      index: "/index.html",
+    },
+  },
+
   resolve: {
     extensions: [".jsx", ".js", ".json"],
   },
@@ -54,12 +61,14 @@ module.exports = {
         ui: "reactUi",
         vanilla: "vanilla",
         login: "login",
+        home: "reactHome",
         // ui: "reactUi@http://localhost:3010/remoteEntry.js", //not working
         // vanilla: "vanilla@http://localhost:3015/remoteEntry.js",
       },
-      // exposes: {
-      //   fruit: "./src/fruit",
-      // },
+      exposes: {
+        // fruit: "./src/fruit",
+        // './index': './src/index'
+      },
       shared:
         // ...Object.keys(deps), // for prototype simplicity
         // 'single-spa'
@@ -68,6 +77,11 @@ module.exports = {
             singleton: true,
             eager: true,
             requiredVersion: deps["single-spa"],
+          },
+          "single-spa-layout": {
+            singleton: true,
+            eager: true,
+            requiredVersion: deps["single-spa-layout"],
           },
         },
 

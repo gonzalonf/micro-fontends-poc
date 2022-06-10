@@ -12,27 +12,54 @@
     <script src="http://localhost:4000/remoteEntry.js"></script>
     <!-- react ui -->
     <script src="http://localhost:3010/remoteEntry.js"></script>
-    <!-- vanilla -->
+    <!-- vanilla (lib? state?)-->
     <script src="http://localhost:3015/remoteEntry.js"></script>
-
-
+    <!-- React home-->
+    <script src="http://localhost:3020/remoteEntry.js"></script>
     <!--
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
     Learn more about why at https://single-spa.js.org/docs/ecosystem-angular/#zonejs
   -->
   <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script>
   </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
   <body>
     <div class="">
-      <h1>MFE with SSpa & Module Feredation</h1>
+      <!-- <h1>MFE with SSpa & Module Feredation</h1> -->
       <div class="content">
+        
+        <div id="single-spa-application:header"></div>
+        <div id="single-spa-application:login"></div>
       </div>
-      
-      <h2>desde aca</h2>
-      <div id="single-spa-application:header"></div>
-      <div id="single-spa-application:login"></div>
+
       <!-- <div id="sSpaHeader"></div> -->
       <!-- <div id="test-parcel"></div> -->
+
+
+    <!-- <template id="single-spa-layout">
+      <single-spa-router>
+        <nav class="topnav">
+          <application name="header"></application>
+        </nav>
+        <div class="login">
+          <route path="settings">
+            <application name="login"></application>
+          </route>
+          <route path="clients">
+            <application name="login"></application>
+          </route>
+        </div>
+        <footer>
+          <application name="@organization/footer"></application>
+        </footer>
+      </single-spa-router>
+    </template> -->
 
   </body>
 </html>

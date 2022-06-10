@@ -1,0 +1,29 @@
+{
+  "name": "react-home",
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack --mode production",
+    "serve": "serve dist -p 3020",
+    "watch:serve": "concurrently \"webpack --watch\" \"serve dist -p 3020\""
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/eslint-parser": "^7.15.0",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.5",
+    "concurrently": "^7.2.1",
+    "html-webpack-plugin": "^5.5.0",
+    "serve": "^13.0.2",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.0.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "single-spa-react": "^4.3.1"
+  }
+}

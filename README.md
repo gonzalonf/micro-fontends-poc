@@ -1,6 +1,7 @@
 # Microfrontends POC:
 
-Simple POC to explore Microfrontend architecture using Webpack Module Federation and Single Spa.
+- Simple POC to explore Microfrontend architecture using Webpack Module Federation and Single Spa.
+- Currently integrating over SingleSpa: React 15, React 17, Angular 13, and vanilla (...lib?)
 
 ---
 
@@ -26,20 +27,15 @@ In Single-SPA there are two approaches to sharing dependencies:
 
 ---
 
-TODO:
+TODO / further exploration:
 
-- Explore different loading strategies for MFE with single-spa
-- UI components instead of full page apps
-- Module federation vs Loading runtime
+- clean configs and unnecessary libs
+- Omni-directional hosts
+- UI components inside other MFEs
 - Share state & logic
 - Implement Auth/JWT
-
-Further exploration:
-
-- alternative integration.. single-spa uses SystemJS by default, but can use vanilla imports (less browser compatibility)
+- deploy / CI
 - different shell libs and options... vanilla?
-- deploying & CI
-- make full working app with different MFE and lib versions
 - web components as MFEs
 
 ---
@@ -95,6 +91,7 @@ Also, check [Jack Herrington's channel](https://www.youtube.com/c/JackHerrington
 ## Notes on possible errors
 
 //TODO: paste solutions
+//TODO: watch reloading of whole app on route change
 https://stackoverflow.com/questions/53704950/webpack-code-splitting-loading-chunk-failed-error-wrong-file-path
 https://stackoverflow.com/questions/71232571/invalid-syntax-error-when-trying-to-import-remote-component
 https://blog.devgenius.io/module-federation-advanced-api-inwebpack-5-0-0-beta-17-71cd4d42e534
