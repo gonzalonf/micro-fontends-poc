@@ -46,11 +46,6 @@ module.exports = {
         // Footer: "./src/Footer",
       },
       shared: {
-        // "@babel/runtime": {
-        //   singleton: true,
-        //   eager: true,
-        //   requiredVersion: deps["@babel/runtime"],
-        // },
         react: {
           singleton: true,
           eager: true,

@@ -5,6 +5,14 @@
 
 ---
 
+## Run
+
+Go to each folder (as they are standalone apps), and do:
+
+`npm run watch:serve`
+
+---
+
 ## LEARNINGS:
 
 - Try to reduce libs & dependencies to a minimun on different microfrontends

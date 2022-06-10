@@ -23,6 +23,6 @@ export class AppComponent {
     this.showError = false;
     console.log(`Hi, ${trimmedName}... welcome!`);
     localStorage.setItem('userName', trimmedName);
-    location.pathname = '/home';
+    history.pushState({}, '', '/home');
   }
 }
