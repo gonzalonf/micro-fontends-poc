@@ -41,7 +41,7 @@ module.exports = {
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {
-        "./greet": "./src/greet", //NOTE: this './exported' key is the new syntax, a simple key without "./" fails
+        "./store": "./src/store", //NOTE: this './exported' key is the new syntax, a simple key without "./" fails
         // App: "./src/App",
       },
       shared: [],

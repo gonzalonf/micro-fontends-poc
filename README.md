@@ -39,8 +39,7 @@ TODO / further exploration:
 
 - clean configs and unnecessary libs
 - Omni-directional hosts
-- UI components inside other MFEs
-- Share state & logic
+- UI components inside other MFE
 - Implement Auth/JWT
 - deploy / CI
 - different shell libs and options... vanilla?

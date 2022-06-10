@@ -30,29 +30,6 @@ registerApplication({
 });
 
 start();
-
-/* CHECK IMPORTS  */
-const testImport = async () => {
-  try {
-    // const { default: greet } = await import("vanilla/greet"); //default export
-    const { greet } = await import("vanilla/greet"); // named export
-    greet.sayHi();
-
-    console.log("lazy vanilla ", greet);
-
-    const Header = await import("ui/Header");
-
-    console.log("lazy  header", Header.default);
-    console.log("lazy  header", Header);
-
-    const Home = await import("home/Home");
-  } catch (error) {
-    console.log("ERROR IN IMPORT");
-    console.error(error);
-  }
-};
-// testImport();
-
 // import { registerApplication, start } from 'single-spa';
 // import {
 //   constructApplications,

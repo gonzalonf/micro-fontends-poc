@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+// @ts-ignore
+import store from 'vanilla/store';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -21,8 +24,10 @@ export class AppComponent {
       return;
     }
     this.showError = false;
-    console.log(`Hi, ${trimmedName}... welcome!`);
+    // console.log(`Hi, ${trimmedName}... welcome!`);
     localStorage.setItem('userName', trimmedName);
+    store.user = trimmedName;
+
     history.pushState({}, '', '/home');
   }
 }

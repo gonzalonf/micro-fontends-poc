@@ -59,7 +59,6 @@ module.exports = {
       library: { type: "global", name: "shell" }, //NOTE: this is important for different type of imports, if you wantto pass routes on all, remove library property
       remotes: {
         ui: "reactUi",
-        vanilla: "vanilla",
         login: "login",
         home: "reactHome",
         // ui: "reactUi@http://localhost:3010/remoteEntry.js", //not working

@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import store from "vanilla/store";
 
 // NOTE: please, don't do any of this practices (navigation, styling, etc...).. all is just for simpliicty in POC
 
 export default function Header(props) {
-  // const history =
+  const [name, setName] = useState("");
+  useEffect(() => {
+    setName(store.user.name);
+  }, []);
+
   return (
-    <nav style={{ width: "100%", height: "100px", background: "lightblue" }}>
+    <nav
+      style={{
+        width: "100%",
+        height: "100px",
+        background: "lightblue",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: "0 20px",
+      }}
+    >
       <ul style={{ listStyle: "none" }}>
         <li style={{ display: "inline-block", marginRight: "10px" }}>
           <a
@@ -44,6 +59,11 @@ export default function Header(props) {
           <h2>MFE with SSpa & Module Feredation (React 17 app)</h2>
         </li>
       </ul>
+      {!!name && (
+        <span style={{ fontWeight: "bold", color: "blue", fontSize: "20px" }}>
+          User: {name}
+        </span>
+      )}
     </nav>
   );
 }

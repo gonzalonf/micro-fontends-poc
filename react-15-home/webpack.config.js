@@ -39,7 +39,9 @@ module.exports = {
       name: "reactHome",
       library: { type: "var", name: "reactHome" },
       filename: "remoteEntry.js",
-      remotes: {},
+      remotes: {
+        vanilla: "vanilla",
+      },
       exposes: {
         "./Home": "./src/HomeMfe",
       },

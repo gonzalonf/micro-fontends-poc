@@ -40,7 +40,9 @@ module.exports = {
       name: "reactUi",
       library: { type: "var", name: "reactUi" },
       filename: "remoteEntry.js",
-      remotes: {},
+      remotes: {
+        vanilla: "vanilla",
+      },
       exposes: {
         "./Header": "./src/HeaderMfe",
         // Footer: "./src/Footer",

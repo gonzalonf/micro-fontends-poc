@@ -1,1 +1,1 @@
-import("./greet");
+import("./store");
